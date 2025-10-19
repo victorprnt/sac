@@ -1,0 +1,249 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "john@example.com",
+      "password": "password123",
+      "name": "John Doe",
+      "role": "customer"
+    },
+    {
+      "id": 2,
+      "email": "jane@example.com",
+      "password": "password123",
+      "name": "Jane Smith",
+      "role": "customer"
+    }
+  ],
+  "entrepreneurs": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "email": "sarah@webdesign.com",
+      "bio": "Professional web designer with 5+ years of experience creating beautiful, responsive websites.",
+      "rating": 4.8,
+      "reviewCount": 127,
+      "specialties": ["Web Design", "UI/UX", "Frontend Development"],
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 2,
+      "name": "Mike Chen",
+      "email": "mike@digitalmarketing.com",
+      "bio": "Digital marketing expert helping businesses grow their online presence through strategic campaigns.",
+      "rating": 4.9,
+      "reviewCount": 89,
+      "specialties": ["Digital Marketing", "SEO", "Social Media"],
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 3,
+      "name": "Emily Rodriguez",
+      "email": "emily@contentwriting.com",
+      "bio": "Creative content writer specializing in blog posts, copywriting, and brand storytelling.",
+      "rating": 4.7,
+      "reviewCount": 156,
+      "specialties": ["Content Writing", "Copywriting", "Blog Writing"],
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "email": "david@photography.com",
+      "bio": "Professional photographer capturing moments that matter for businesses and individuals.",
+      "rating": 4.9,
+      "reviewCount": 203,
+      "specialties": ["Photography", "Photo Editing", "Brand Photography"],
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "entrepreneurId": 1,
+      "title": "Custom Website Design",
+      "description": "Create a stunning, responsive website tailored to your business needs. Includes modern design, mobile optimization, and user-friendly interface.",
+      "price": 299,
+      "duration": "2-3 weeks",
+      "category": "Web Design",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      "features": [
+        "Responsive Design",
+        "Modern UI/UX",
+        "Mobile Optimization",
+        "SEO Friendly",
+        "Content Management System"
+      ],
+      "rating": 4.8,
+      "reviewCount": 45
+    },
+    {
+      "id": 2,
+      "entrepreneurId": 1,
+      "title": "E-commerce Website",
+      "description": "Complete e-commerce solution with shopping cart, payment integration, and inventory management.",
+      "price": 599,
+      "duration": "4-5 weeks",
+      "category": "Web Design",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      "features": [
+        "Shopping Cart",
+        "Payment Gateway",
+        "Inventory Management",
+        "Order Tracking",
+        "Admin Dashboard"
+      ],
+      "rating": 4.9,
+      "reviewCount": 32
+    },
+    {
+      "id": 3,
+      "entrepreneurId": 2,
+      "title": "Digital Marketing Strategy",
+      "description": "Comprehensive digital marketing plan to boost your online presence and drive more customers to your business.",
+      "price": 199,
+      "duration": "1-2 weeks",
+      "category": "Digital Marketing",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      "features": [
+        "Market Analysis",
+        "SEO Strategy",
+        "Social Media Plan",
+        "Content Calendar",
+        "Performance Tracking"
+      ],
+      "rating": 4.9,
+      "reviewCount": 28
+    },
+    {
+      "id": 4,
+      "entrepreneurId": 2,
+      "title": "SEO Optimization",
+      "description": "Improve your website's search engine rankings with professional SEO optimization services.",
+      "price": 149,
+      "duration": "2-3 weeks",
+      "category": "Digital Marketing",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+      "features": [
+        "Keyword Research",
+        "On-page SEO",
+        "Technical SEO",
+        "Link Building",
+        "Monthly Reports"
+      ],
+      "rating": 4.8,
+      "reviewCount": 41
+    },
+    {
+      "id": 5,
+      "entrepreneurId": 3,
+      "title": "Blog Content Writing",
+      "description": "High-quality blog posts that engage your audience and improve your SEO rankings.",
+      "price": 99,
+      "duration": "1 week",
+      "category": "Content Writing",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop",
+      "features": [
+        "SEO Optimized",
+        "Engaging Content",
+        "Research Included",
+        "Unlimited Revisions",
+        "Fast Delivery"
+      ],
+      "rating": 4.7,
+      "reviewCount": 67
+    },
+    {
+      "id": 6,
+      "entrepreneurId": 3,
+      "title": "Website Copywriting",
+      "description": "Compelling copy for your website that converts visitors into customers.",
+      "price": 199,
+      "duration": "1-2 weeks",
+      "category": "Content Writing",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      "features": [
+        "Homepage Copy",
+        "About Page",
+        "Service Descriptions",
+        "Call-to-Actions",
+        "Brand Voice"
+      ],
+      "rating": 4.8,
+      "reviewCount": 52
+    },
+    {
+      "id": 7,
+      "entrepreneurId": 4,
+      "title": "Professional Headshots",
+      "description": "High-quality professional headshots for your business profile, LinkedIn, or personal branding.",
+      "price": 149,
+      "duration": "1 day",
+      "category": "Photography",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+      "features": [
+        "Studio Session",
+        "5 Edited Photos",
+        "Multiple Outfits",
+        "Professional Retouching",
+        "Digital Delivery"
+      ],
+      "rating": 4.9,
+      "reviewCount": 89
+    },
+    {
+      "id": 8,
+      "entrepreneurId": 4,
+      "title": "Product Photography",
+      "description": "Stunning product photos that showcase your items and increase sales conversion.",
+      "price": 249,
+      "duration": "2-3 days",
+      "category": "Photography",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
+      "features": [
+        "Studio Setup",
+        "Multiple Angles",
+        "Professional Lighting",
+        "Background Options",
+        "High Resolution"
+      ],
+      "rating": 4.9,
+      "reviewCount": 76
+    }
+  ],
+  "categories": [
+    "Web Design",
+    "Digital Marketing",
+    "Content Writing",
+    "Photography"
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "serviceId": 1,
+      "userId": 1,
+      "date": "2024-01-15",
+      "time": "10:00",
+      "status": "confirmed",
+      "createdAt": "2024-01-10T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "serviceId": 3,
+      "userId": 1,
+      "date": "2024-01-20",
+      "time": "14:00",
+      "status": "pending",
+      "createdAt": "2024-01-12T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "serviceId": 5,
+      "userId": 1,
+      "date": "2024-01-05",
+      "time": "09:00",
+      "status": "completed",
+      "createdAt": "2024-01-01T09:00:00Z"
+    }
+  ]
+}
