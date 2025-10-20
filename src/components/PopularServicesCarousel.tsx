@@ -38,9 +38,11 @@ const PopularServicesCarousel: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setCardsPerView(1);
+        setCardsPerView(1); // Mobile: 1 card
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2); // Tablet: 2 cards
       } else {
-        setCardsPerView(3);
+        setCardsPerView(5); // Desktop: 5 cards
       }
     };
 
@@ -64,7 +66,7 @@ const PopularServicesCarousel: React.FC = () => {
             }
             return b.reviewCount - a.reviewCount;
           })
-          .slice(0, 6); // Take top 6 services
+          .slice(0, 10); // Take top 10 services
 
         setServices(popularServices);
         setEntrepreneurs(data.entrepreneurs);
@@ -133,7 +135,11 @@ const PopularServicesCarousel: React.FC = () => {
                   <div
                     key={service.id}
                     className={`flex-shrink-0 px-3 ${
-                      cardsPerView === 1 ? "w-full" : "w-1/3"
+                      cardsPerView === 1
+                        ? "w-full"
+                        : cardsPerView === 2
+                        ? "w-1/2"
+                        : "w-1/5"
                     }`}
                   >
                     <ServiceCard

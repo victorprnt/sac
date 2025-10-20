@@ -73,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
     switch (variant) {
       case "carousel":
-        return `${baseClasses} h-full flex flex-col`;
+        return `${baseClasses} h-full flex flex-col max-w-[calc(100vw-3rem)] sm:max-w-none`;
       case "compact":
         return `${baseClasses} h-full`;
       default:
@@ -131,10 +131,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
   return (
     <>
-      <div
-        className={getCardClasses()}
-        style={variant === "carousel" ? { maxWidth: "calc(100vw - 3rem)" } : {}}
-      >
+      <div className={getCardClasses()}>
         {/* Service Image */}
         <div className="aspect-w-16 aspect-h-9">
           <img
