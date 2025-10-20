@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import {
-  Search,
-  Star,
-  Clock,
-  DollarSign,
-  SlidersHorizontal,
-} from "lucide-react";
+import { Search, SlidersHorizontal } from "lucide-react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ServiceCard from "../components/ServiceCard";
 
 interface Service {
   id: number;
@@ -49,7 +45,7 @@ const ServicesPage: React.FC = () => {
   );
   const [selectedCategory, setSelectedCategory] = useState("");
   const [minRating, setMinRating] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(1000);
+  const [maxPrice, setMaxPrice] = useState(200);
   const [sortBy, setSortBy] = useState("rating");
   const [showFilters, setShowFilters] = useState(false);
 
@@ -97,7 +93,7 @@ const ServicesPage: React.FC = () => {
     }
 
     // Price filter
-    if (maxPrice < 1000) {
+    if (maxPrice < 200) {
       filtered = filtered.filter((service) => service.price <= maxPrice);
     }
 
@@ -130,7 +126,7 @@ const ServicesPage: React.FC = () => {
     setSearchTerm("");
     setSelectedCategory("");
     setMinRating(0);
-    setMaxPrice(1000);
+    setMaxPrice(200);
     setSortBy("rating");
   };
 
@@ -149,13 +145,47 @@ const ServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
+      {/* Main Search Banner */}
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-8">Encontre Serviços</h1>
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Buscar Serviços..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 text-lg border-0 rounded-full focus:ring-4 focus:ring-indigo-300 focus:outline-none"
+                />
+                <button
+                  onClick={() => {
+                    if (searchTerm.trim()) {
+                      navigate(
+                        `/services?search=${encodeURIComponent(
+                          searchTerm.trim()
+                        )}`
+                      );
+                    }
+                  }}
+                  className="absolute right-2 top-2 bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-full transition-colors"
+                >
+                  <Search className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filters Sidebar */}
           <div className="lg:w-80">
-            <div className="bg-white rounded-lg shadow-sm p-6 sticky top-8">
+            <div className="bg-white rounded-xl shadow-sm p-6 sticky top-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-gray-900">Filtros</h3>
+                <h3 className="text-xl font-bold text-gray-900">Filtros</h3>
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="lg:hidden flex items-center text-gray-600 hover:text-gray-900"
@@ -170,108 +200,81 @@ const ServicesPage: React.FC = () => {
                   showFilters ? "block" : "hidden lg:block"
                 }`}
               >
-                {/* Search */}
+                {/* Categories */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Buscar
-                  </label>
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                    <input
-                      type="text"
-                      placeholder="Buscar serviços..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Category */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Categoria
-                  </label>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  >
-                    <option value="">Todas as Categorias</option>
-                    {categories.map((category) => (
-                      <option key={category} value={category}>
-                        {category}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Rating */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Avaliação Mínima
-                  </label>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                    Categorias
+                  </h4>
                   <div className="space-y-2">
-                    {[0, 3, 4, 4.5].map((rating) => (
-                      <label key={rating} className="flex items-center">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="category"
+                        value=""
+                        checked={selectedCategory === ""}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="mr-3 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <span className="text-gray-700">Todas</span>
+                    </label>
+                    {categories.map((category) => (
+                      <label key={category} className="flex items-center">
                         <input
                           type="radio"
-                          name="rating"
-                          value={rating}
-                          checked={minRating === rating}
-                          onChange={(e) => setMinRating(Number(e.target.value))}
-                          className="mr-2"
+                          name="category"
+                          value={category}
+                          checked={selectedCategory === category}
+                          onChange={(e) => setSelectedCategory(e.target.value)}
+                          className="mr-3 text-indigo-600 focus:ring-indigo-500"
                         />
-                        <span className="text-sm text-gray-700">
-                          {rating === 0 ? "Qualquer" : `${rating}+ estrelas`}
-                        </span>
+                        <span className="text-gray-700">{category}</span>
                       </label>
                     ))}
                   </div>
                 </div>
 
-                {/* Price Range */}
+                {/* Service Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Preço Máximo: R$ {maxPrice}
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                    Tipo
+                  </h4>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="mr-3 text-indigo-600 focus:ring-indigo-500 rounded"
+                    />
+                    <span className="text-gray-700">
+                      Mostrar apenas trabalho voluntário
+                    </span>
                   </label>
-                  <input
-                    type="range"
-                    min="50"
-                    max="1000"
-                    step="50"
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(Number(e.target.value))}
-                    className="w-full"
-                  />
-                  <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>R$ 50</span>
-                    <span>R$ 1000</span>
-                  </div>
                 </div>
 
-                {/* Sort */}
+                {/* Price Range */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Ordenar por
-                  </label>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  >
-                    <option value="rating">Melhor Avaliado</option>
-                    <option value="price-low">Menor Preço</option>
-                    <option value="price-high">Maior Preço</option>
-                    <option value="reviews">Mais Avaliado</option>
-                    <option value="name">Nome A-Z</option>
-                  </select>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                    Faixa de preço
+                  </h4>
+                  <div className="space-y-3">
+                    <input
+                      type="range"
+                      min="0"
+                      max="200"
+                      step="10"
+                      value={maxPrice}
+                      onChange={(e) => setMaxPrice(Number(e.target.value))}
+                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    />
+                    <div className="flex justify-between text-sm text-gray-600">
+                      <span>R$ 0</span>
+                      <span>R$ {maxPrice}</span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Clear Filters */}
                 <button
                   onClick={clearFilters}
-                  className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
+                  className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
                 >
                   Limpar Filtros
                 </button>
@@ -287,81 +290,19 @@ const ServicesPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredServices.map((service) => {
                 const entrepreneur = getEntrepreneur(service.entrepreneurId);
+
                 return (
-                  <div
+                  <ServiceCard
                     key={service.id}
-                    className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-                  >
-                    <div className="aspect-w-16 aspect-h-9">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-48 object-cover"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                          {service.category}
-                        </span>
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="ml-1 text-sm text-gray-600">
-                            {service.rating}
-                          </span>
-                          <span className="ml-1 text-sm text-gray-500">
-                            ({service.reviewCount})
-                          </span>
-                        </div>
-                      </div>
-
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                        {service.description}
-                      </p>
-
-                      {entrepreneur && (
-                        <div className="flex items-center mb-4">
-                          <img
-                            src={entrepreneur.avatar}
-                            alt={entrepreneur.name}
-                            className="w-8 h-8 rounded-full mr-3"
-                          />
-                          <div>
-                            <p className="text-sm font-medium text-gray-900">
-                              {entrepreneur.name}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              {entrepreneur.specialties[0]}
-                            </p>
-                          </div>
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center text-gray-600">
-                          <Clock className="w-4 h-4 mr-1" />
-                          <span className="text-sm">{service.duration}</span>
-                        </div>
-                        <div className="flex items-center text-indigo-600 font-semibold">
-                          <DollarSign className="w-4 h-4 mr-1" />
-                          <span>R$ {service.price}</span>
-                        </div>
-                      </div>
-
-                      <button
-                        onClick={() => navigate(`/service/${service.id}`)}
-                        className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
-                      >
-                        Ver Detalhes
-                      </button>
-                    </div>
-                  </div>
+                    service={service}
+                    entrepreneur={entrepreneur}
+                    variant="default"
+                    showProvider={true}
+                    showActions={true}
+                  />
                 );
               })}
             </div>
@@ -382,6 +323,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

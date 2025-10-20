@@ -2,115 +2,139 @@
   "users": [
     {
       "id": 1,
-      "email": "john@example.com",
-      "password": "password123",
-      "name": "John Doe",
-      "role": "customer"
+      "email": "joao.silva@gmail.com",
+      "password": "senha123",
+      "name": "João Silva",
+      "role": "cliente"
     },
     {
       "id": 2,
-      "email": "jane@example.com",
-      "password": "password123",
-      "name": "Jane Smith",
-      "role": "customer"
+      "email": "maria.souza@gmail.com",
+      "password": "senha123",
+      "name": "Maria Souza",
+      "role": "cliente"
     }
   ],
   "entrepreneurs": [
     {
       "id": 1,
-      "name": "Sarah Johnson",
-      "email": "sarah@webdesign.com",
-      "bio": "Professional web designer with 5+ years of experience creating beautiful, responsive websites.",
-      "rating": 4.8,
-      "reviewCount": 127,
-      "specialties": ["Web Design", "UI/UX", "Frontend Development"],
-      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      "name": "Carlos Almeida",
+      "email": "carlos@reparos.com.br",
+      "bio": "Bombeiro hidráulico com mais de 10 anos de experiência em manutenção residencial e predial.",
+      "rating": 4.9,
+      "reviewCount": 85,
+      "specialties": ["Hidráulica", "Manutenção", "Instalações"],
+      "avatar": "https://images.unsplash.com/photo-1603415526960-f7e0328d3d83?w=150&h=150&fit=crop&crop=face"
     },
     {
       "id": 2,
-      "name": "Mike Chen",
-      "email": "mike@digitalmarketing.com",
-      "bio": "Digital marketing expert helping businesses grow their online presence through strategic campaigns.",
-      "rating": 4.9,
-      "reviewCount": 89,
-      "specialties": ["Digital Marketing", "SEO", "Social Media"],
-      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      "name": "Fernanda Oliveira",
+      "email": "fernanda@costurasfinas.com",
+      "bio": "Costureira especializada em ajustes e confecção sob medida. Atendimento rápido e de qualidade.",
+      "rating": 4.8,
+      "reviewCount": 112,
+      "specialties": ["Costura", "Ajustes", "Moda Sob Medida"],
+      "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face"
     },
     {
       "id": 3,
-      "name": "Emily Rodriguez",
-      "email": "emily@contentwriting.com",
-      "bio": "Creative content writer specializing in blog posts, copywriting, and brand storytelling.",
+      "name": "Lucas Pereira",
+      "email": "lucas@techsmart.com.br",
+      "bio": "Desenvolvedor web e técnico em TI, especialista em sites e manutenção de computadores.",
       "rating": 4.7,
-      "reviewCount": 156,
-      "specialties": ["Content Writing", "Copywriting", "Blog Writing"],
-      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      "reviewCount": 94,
+      "specialties": ["Web Design", "Suporte Técnico", "Redes"],
+      "avatar": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=150&h=150&fit=crop&crop=face"
     },
     {
       "id": 4,
-      "name": "David Kim",
-      "email": "david@photography.com",
-      "bio": "Professional photographer capturing moments that matter for businesses and individuals.",
+      "name": "Ana Ribeiro",
+      "email": "ana@jardimverde.com",
+      "bio": "Paisagista e jardineira com foco em jardins sustentáveis e manutenção residencial.",
       "rating": 4.9,
-      "reviewCount": 203,
-      "specialties": ["Photography", "Photo Editing", "Brand Photography"],
-      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      "reviewCount": 68,
+      "specialties": ["Jardinagem", "Paisagismo", "Manutenção de Jardins"],
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 5,
+      "name": "Roberto Martins",
+      "email": "roberto@eletricpro.com.br",
+      "bio": "Eletricista profissional com certificação NR10 e mais de 15 anos de experiência.",
+      "rating": 4.8,
+      "reviewCount": 73,
+      "specialties": ["Elétrica", "Automação Residencial", "Instalações"],
+      "avatar": "https://images.unsplash.com/photo-1601933473352-3b0a5b5e7b5f?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 6,
+      "name": "Patrícia Gomes",
+      "email": "patricia@belezaexpress.com",
+      "bio": "Cabeleireira e maquiadora profissional especializada em eventos e noivas.",
+      "rating": 4.9,
+      "reviewCount": 127,
+      "specialties": ["Beleza", "Cabelos", "Maquiagem"],
+      "avatar": "https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      "id": 7,
+      "name": "Rafael Torres",
+      "email": "rafael@designcriativo.com",
+      "bio": "Designer gráfico e editor de vídeo com experiência em branding e marketing digital.",
+      "rating": 4.8,
+      "reviewCount": 101,
+      "specialties": ["Design", "Edição de Vídeo", "Social Media"],
+      "avatar": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=150&h=150&fit=crop&crop=face"
     }
   ],
   "services": [
     {
       "id": 1,
       "entrepreneurId": 1,
-      "title": "Custom Website Design",
-      "description": "Create a stunning, responsive website tailored to your business needs. Includes modern design, mobile optimization, and user-friendly interface.",
-      "price": 299,
-      "duration": "2-3 weeks",
-      "category": "Web Design",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      "title": "Reparo de Vazamentos",
+      "description": "Identificação e reparo de vazamentos em torneiras, canos e descargas.",
+      "price": 180,
+      "duration": "1-2 horas",
+      "category": "Hidráulica",
+      "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop",
       "features": [
-        "Responsive Design",
-        "Modern UI/UX",
-        "Mobile Optimization",
-        "SEO Friendly",
-        "Content Management System"
+        "Atendimento rápido",
+        "Peças originais",
+        "Garantia de 30 dias"
       ],
-      "rating": 4.8,
-      "reviewCount": 45
+      "rating": 4.9,
+      "reviewCount": 33
     },
     {
       "id": 2,
       "entrepreneurId": 1,
-      "title": "E-commerce Website",
-      "description": "Complete e-commerce solution with shopping cart, payment integration, and inventory management.",
-      "price": 599,
-      "duration": "4-5 weeks",
-      "category": "Web Design",
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      "title": "Instalação de Chuveiro Elétrico",
+      "description": "Instalação segura e rápida de chuveiros elétricos e aquecedores.",
+      "price": 120,
+      "duration": "1 hora",
+      "category": "Hidráulica",
+      "image": "https://images.unsplash.com/photo-1601933473352-3b0a5b5e7b5f?w=400&h=300&fit=crop",
       "features": [
-        "Shopping Cart",
-        "Payment Gateway",
-        "Inventory Management",
-        "Order Tracking",
-        "Admin Dashboard"
+        "Verificação elétrica",
+        "Materiais inclusos",
+        "Garantia de instalação"
       ],
-      "rating": 4.9,
-      "reviewCount": 32
+      "rating": 4.8,
+      "reviewCount": 41
     },
     {
       "id": 3,
-      "entrepreneurId": 2,
-      "title": "Digital Marketing Strategy",
-      "description": "Comprehensive digital marketing plan to boost your online presence and drive more customers to your business.",
-      "price": 199,
-      "duration": "1-2 weeks",
-      "category": "Digital Marketing",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      "entrepreneurId": 1,
+      "title": "Desentupimento de Pia",
+      "description": "Serviço de desentupimento rápido e seguro de pias e ralos.",
+      "price": 150,
+      "duration": "1 hora",
+      "category": "Hidráulica",
+      "image": "https://images.unsplash.com/photo-1597007255171-4e9dfb6f8199?w=400&h=300&fit=crop",
       "features": [
-        "Market Analysis",
-        "SEO Strategy",
-        "Social Media Plan",
-        "Content Calendar",
-        "Performance Tracking"
+        "Sem produtos químicos agressivos",
+        "Equipamento profissional",
+        "Atendimento emergencial"
       ],
       "rating": 4.9,
       "reviewCount": 28
@@ -118,132 +142,476 @@
     {
       "id": 4,
       "entrepreneurId": 2,
-      "title": "SEO Optimization",
-      "description": "Improve your website's search engine rankings with professional SEO optimization services.",
-      "price": 149,
-      "duration": "2-3 weeks",
-      "category": "Digital Marketing",
-      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
-      "features": [
-        "Keyword Research",
-        "On-page SEO",
-        "Technical SEO",
-        "Link Building",
-        "Monthly Reports"
-      ],
+      "title": "Ajuste de Roupas",
+      "description": "Ajustes em calças, vestidos e camisas com acabamento profissional.",
+      "price": 60,
+      "duration": "2 dias úteis",
+      "category": "Costura",
+      "image": "https://images.unsplash.com/photo-1571715261810-1c31ca6e0b1b?w=400&h=300&fit=crop",
+      "features": ["Prova presencial", "Entrega rápida", "Costura reforçada"],
       "rating": 4.8,
-      "reviewCount": 41
+      "reviewCount": 56
     },
     {
       "id": 5,
-      "entrepreneurId": 3,
-      "title": "Blog Content Writing",
-      "description": "High-quality blog posts that engage your audience and improve your SEO rankings.",
-      "price": 99,
-      "duration": "1 week",
-      "category": "Content Writing",
-      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop",
+      "entrepreneurId": 2,
+      "title": "Conserto de Zíper",
+      "description": "Troca e ajuste de zíperes em roupas e bolsas.",
+      "price": 45,
+      "duration": "1 dia útil",
+      "category": "Costura",
+      "image": "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?w=400&h=300&fit=crop",
       "features": [
-        "SEO Optimized",
-        "Engaging Content",
-        "Research Included",
-        "Unlimited Revisions",
-        "Fast Delivery"
+        "Materiais de qualidade",
+        "Entrega no mesmo dia",
+        "Atendimento personalizado"
       ],
-      "rating": 4.7,
-      "reviewCount": 67
+      "rating": 4.9,
+      "reviewCount": 22
     },
     {
       "id": 6,
       "entrepreneurId": 3,
-      "title": "Website Copywriting",
-      "description": "Compelling copy for your website that converts visitors into customers.",
-      "price": 199,
-      "duration": "1-2 weeks",
-      "category": "Content Writing",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-      "features": [
-        "Homepage Copy",
-        "About Page",
-        "Service Descriptions",
-        "Call-to-Actions",
-        "Brand Voice"
-      ],
-      "rating": 4.8,
-      "reviewCount": 52
+      "title": "Criação de Site Institucional",
+      "description": "Desenvolvimento de site profissional para empresas e autônomos.",
+      "price": 850,
+      "duration": "2-3 semanas",
+      "category": "Tecnologia",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+      "features": ["Design responsivo", "Hospedagem incluída", "SEO básico"],
+      "rating": 4.7,
+      "reviewCount": 27
     },
     {
       "id": 7,
-      "entrepreneurId": 4,
-      "title": "Professional Headshots",
-      "description": "High-quality professional headshots for your business profile, LinkedIn, or personal branding.",
-      "price": 149,
-      "duration": "1 day",
-      "category": "Photography",
-      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+      "entrepreneurId": 3,
+      "title": "Manutenção de Computadores",
+      "description": "Formatação, limpeza de sistema e otimização de desempenho.",
+      "price": 150,
+      "duration": "1 dia",
+      "category": "Tecnologia",
+      "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=400&h=300&fit=crop",
       "features": [
-        "Studio Session",
-        "5 Edited Photos",
-        "Multiple Outfits",
-        "Professional Retouching",
-        "Digital Delivery"
+        "Backup seguro",
+        "Limpeza interna",
+        "Atualização de drivers"
       ],
       "rating": 4.9,
-      "reviewCount": 89
+      "reviewCount": 49
     },
     {
       "id": 8,
-      "entrepreneurId": 4,
-      "title": "Product Photography",
-      "description": "Stunning product photos that showcase your items and increase sales conversion.",
-      "price": 249,
-      "duration": "2-3 days",
-      "category": "Photography",
-      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
+      "entrepreneurId": 3,
+      "title": "Configuração de Rede Wi-Fi",
+      "description": "Instalação e otimização de roteadores e conexões residenciais.",
+      "price": 100,
+      "duration": "1 hora",
+      "category": "Tecnologia",
+      "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=400&h=300&fit=crop",
       "features": [
-        "Studio Setup",
-        "Multiple Angles",
-        "Professional Lighting",
-        "Background Options",
-        "High Resolution"
+        "Melhoria de sinal",
+        "Segurança WPA3",
+        "Otimização de velocidade"
+      ],
+      "rating": 4.8,
+      "reviewCount": 31
+    },
+    {
+      "id": 9,
+      "entrepreneurId": 4,
+      "title": "Manutenção de Jardim",
+      "description": "Corte de grama, poda de arbustos e limpeza de jardins residenciais.",
+      "price": 130,
+      "duration": "4 horas",
+      "category": "Jardinagem",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
+      "features": [
+        "Coleta de resíduos",
+        "Adubação orgânica",
+        "Ferramentas inclusas"
       ],
       "rating": 4.9,
-      "reviewCount": 76
+      "reviewCount": 58
+    },
+    {
+      "id": 10,
+      "entrepreneurId": 4,
+      "title": "Paisagismo Residencial",
+      "description": "Criação de projetos paisagísticos e ornamentação de áreas externas.",
+      "price": 950,
+      "duration": "1 semana",
+      "category": "Jardinagem",
+      "image": "https://images.unsplash.com/photo-1473445730015-841f29a9490b?w=400&h=300&fit=crop",
+      "features": [
+        "Plantas nativas",
+        "Design sustentável",
+        "Manutenção inclusa"
+      ],
+      "rating": 4.8,
+      "reviewCount": 36
+    },
+    {
+      "id": 11,
+      "entrepreneurId": 4,
+      "title": "Irrigação Automática",
+      "description": "Instalação de sistemas de irrigação inteligente para jardins.",
+      "price": 1200,
+      "duration": "2 dias",
+      "category": "Jardinagem",
+      "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=300&fit=crop",
+      "features": [
+        "Programação automatizada",
+        "Economia de água",
+        "Manutenção fácil"
+      ],
+      "rating": 4.9,
+      "reviewCount": 18
+    },
+    {
+      "id": 12,
+      "entrepreneurId": 5,
+      "title": "Instalação Elétrica Residencial",
+      "description": "Instalação de tomadas, interruptores e iluminação residencial.",
+      "price": 250,
+      "duration": "3 horas",
+      "category": "Elétrica",
+      "image": "https://images.unsplash.com/photo-1581092334808-7b55bce67d8d?w=400&h=300&fit=crop",
+      "features": [
+        "Materiais de qualidade",
+        "Segurança garantida",
+        "Atendimento rápido"
+      ],
+      "rating": 4.9,
+      "reviewCount": 52
+    },
+    {
+      "id": 13,
+      "entrepreneurId": 5,
+      "title": "Automação Residencial",
+      "description": "Instalação de sistemas inteligentes para controle de iluminação e som.",
+      "price": 1450,
+      "duration": "2 dias",
+      "category": "Elétrica",
+      "image": "https://images.unsplash.com/photo-1616627457555-4bcbfa9a0f47?w=400&h=300&fit=crop",
+      "features": [
+        "Controle via app",
+        "Sensores inteligentes",
+        "Integração Alexa"
+      ],
+      "rating": 4.8,
+      "reviewCount": 24
+    },
+    {
+      "id": 14,
+      "entrepreneurId": 5,
+      "title": "Troca de Disjuntor",
+      "description": "Substituição segura e verificada de disjuntores queimados.",
+      "price": 180,
+      "duration": "1 hora",
+      "category": "Elétrica",
+      "image": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+      "features": ["Norma NR10", "Peças originais", "Testes de segurança"],
+      "rating": 4.9,
+      "reviewCount": 33
+    },
+    {
+      "id": 15,
+      "entrepreneurId": 6,
+      "title": "Corte Feminino",
+      "description": "Corte personalizado com análise do tipo de rosto e fios.",
+      "price": 90,
+      "duration": "1 hora",
+      "category": "Beleza",
+      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=300&fit=crop",
+      "features": [
+        "Análise capilar",
+        "Secagem inclusa",
+        "Uso de produtos premium"
+      ],
+      "rating": 4.9,
+      "reviewCount": 64
+    },
+    {
+      "id": 16,
+      "entrepreneurId": 6,
+      "title": "Maquiagem para Eventos",
+      "description": "Maquiagem profissional para festas, casamentos e ensaios.",
+      "price": 180,
+      "duration": "1 hora e 30 min",
+      "category": "Beleza",
+      "image": "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop",
+      "features": [
+        "Duração prolongada",
+        "Prova antes do evento",
+        "Produtos hipoalergênicos"
+      ],
+      "rating": 4.9,
+      "reviewCount": 88
+    },
+    {
+      "id": 17,
+      "entrepreneurId": 6,
+      "title": "Penteado para Noivas",
+      "description": "Penteado elegante e resistente para casamentos e cerimônias.",
+      "price": 250,
+      "duration": "2 horas",
+      "category": "Beleza",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
+      "features": [
+        "Teste prévio",
+        "Sprays fixadores premium",
+        "Acessórios inclusos"
+      ],
+      "rating": 4.9,
+      "reviewCount": 43
+    },
+    {
+      "id": 18,
+      "entrepreneurId": 6,
+      "title": "Hidratação Capilar Profunda",
+      "description": "Tratamento capilar para restauração e brilho intenso.",
+      "price": 120,
+      "duration": "1 hora",
+      "category": "Beleza",
+      "image": "https://images.unsplash.com/photo-1584267385494-9b07a0f36f69?w=400&h=300&fit=crop",
+      "features": [
+        "Produtos naturais",
+        "Efeito imediato",
+        "Finalização com escova"
+      ],
+      "rating": 4.8,
+      "reviewCount": 57
+    },
+    {
+      "id": 19,
+      "entrepreneurId": 7,
+      "title": "Criação de Logo Profissional",
+      "description": "Design de logotipo exclusivo e vetorizado para empresas e marcas pessoais.",
+      "price": 480,
+      "duration": "5 dias",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1587614382346-ac7e65a4c2f5?w=400&h=300&fit=crop",
+      "features": [
+        "3 versões iniciais",
+        "2 revisões",
+        "Entrega em formatos digitais"
+      ],
+      "rating": 4.9,
+      "reviewCount": 55
+    },
+    {
+      "id": 20,
+      "entrepreneurId": 7,
+      "title": "Edição de Vídeo Promocional",
+      "description": "Edição profissional com trilha sonora, legendas e cortes dinâmicos.",
+      "price": 700,
+      "duration": "1 semana",
+      "category": "Edição de Vídeo",
+      "image": "https://images.unsplash.com/photo-1581276879432-15a43c55f3e1?w=400&h=300&fit=crop",
+      "features": [
+        "Edição color grading",
+        "Renderização em 4K",
+        "Música licenciada"
+      ],
+      "rating": 4.8,
+      "reviewCount": 48
+    },
+    {
+      "id": 21,
+      "entrepreneurId": 7,
+      "title": "Criação de Posts para Instagram",
+      "description": "Pacote com artes personalizadas para redes sociais.",
+      "price": 250,
+      "duration": "3 dias",
+      "category": "Social Media",
+      "image": "https://images.unsplash.com/photo-1551817958-20204c7a04e2?w=400&h=300&fit=crop",
+      "features": [
+        "Pacote com 10 posts",
+        "Design alinhado à identidade visual",
+        "Entrega em formato editável"
+      ],
+      "rating": 4.9,
+      "reviewCount": 67
+    },
+    {
+      "id": 22,
+      "entrepreneurId": 7,
+      "title": "Gestão de Redes Sociais",
+      "description": "Criação de conteúdo, agendamento e análise de desempenho.",
+      "price": 950,
+      "duration": "Mensal",
+      "category": "Social Media",
+      "image": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=400&h=300&fit=crop",
+      "features": [
+        "Relatórios mensais",
+        "Calendário de postagens",
+        "Interação com seguidores"
+      ],
+      "rating": 4.8,
+      "reviewCount": 35
+    },
+    {
+      "id": 23,
+      "entrepreneurId": 7,
+      "title": "Criação de Cartão de Visita Digital",
+      "description": "Design moderno e interativo de cartão digital com QR Code.",
+      "price": 180,
+      "duration": "2 dias",
+      "category": "Design",
+      "image": "https://images.unsplash.com/photo-1612831455542-0ae36f22447a?w=400&h=300&fit=crop",
+      "features": ["QR Code incluso", "Link clicável", "Entrega em PDF e PNG"],
+      "rating": 4.9,
+      "reviewCount": 22
+    },
+    {
+      "id": 24,
+      "entrepreneurId": 3,
+      "title": "Criação de Loja Virtual",
+      "description": "Desenvolvimento de e-commerce completo com integração de pagamentos.",
+      "price": 1900,
+      "duration": "3 semanas",
+      "category": "Tecnologia",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=300&fit=crop",
+      "features": [
+        "Carrinho integrado",
+        "Pagamentos online",
+        "Suporte inicial de 30 dias"
+      ],
+      "rating": 4.9,
+      "reviewCount": 21
+    },
+    {
+      "id": 25,
+      "entrepreneurId": 2,
+      "title": "Confecção Sob Medida",
+      "description": "Criação de roupas exclusivas sob encomenda com acabamento artesanal.",
+      "price": 320,
+      "duration": "1 semana",
+      "category": "Costura",
+      "image": "https://images.unsplash.com/photo-1516822003754-cca485356ecb?w=400&h=300&fit=crop",
+      "features": [
+        "Prova personalizada",
+        "Tecidos premium",
+        "Ajustes inclusos"
+      ],
+      "rating": 4.9,
+      "reviewCount": 29
+    },
+    {
+      "id": 26,
+      "entrepreneurId": 5,
+      "title": "Instalação de Ventilador de Teto",
+      "description": "Montagem e instalação completa de ventiladores de teto com segurança.",
+      "price": 200,
+      "duration": "1 hora",
+      "category": "Elétrica",
+      "image": "https://images.unsplash.com/photo-1581091215367-59ab6cda99d4?w=400&h=300&fit=crop",
+      "features": [
+        "Verificação de fiação",
+        "Instalação segura",
+        "Garantia de 30 dias"
+      ],
+      "rating": 4.9,
+      "reviewCount": 39
+    },
+    {
+      "id": 27,
+      "entrepreneurId": 1,
+      "title": "Instalação de Máquina de Lavar",
+      "description": "Conexão hidráulica e elétrica para instalação de lavadoras.",
+      "price": 160,
+      "duration": "1 hora",
+      "category": "Hidráulica",
+      "image": "https://images.unsplash.com/photo-1628157588553-5b62de3f98a4?w=400&h=300&fit=crop",
+      "features": [
+        "Nivelamento incluso",
+        "Verificação de vazamentos",
+        "Garantia de instalação"
+      ],
+      "rating": 4.8,
+      "reviewCount": 26
+    },
+    {
+      "id": 28,
+      "entrepreneurId": 3,
+      "title": "Limpeza e Otimização de Notebook",
+      "description": "Limpeza física e digital com atualização de sistema.",
+      "price": 130,
+      "duration": "1 dia",
+      "category": "Tecnologia",
+      "image": "https://images.unsplash.com/photo-1581093588401-22e6b6dd0d15?w=400&h=300&fit=crop",
+      "features": [
+        "Troca de pasta térmica",
+        "Verificação de vírus",
+        "Backup opcional"
+      ],
+      "rating": 4.9,
+      "reviewCount": 44
+    },
+    {
+      "id": 29,
+      "entrepreneurId": 4,
+      "title": "Poda de Árvores",
+      "description": "Poda segura e estética de árvores e arbustos.",
+      "price": 200,
+      "duration": "3 horas",
+      "category": "Jardinagem",
+      "image": "https://images.unsplash.com/photo-1580983561253-935a4d7c8af1?w=400&h=300&fit=crop",
+      "features": [
+        "Ferramentas inclusas",
+        "Descarte ecológico",
+        "Segurança garantida"
+      ],
+      "rating": 4.9,
+      "reviewCount": 31
+    },
+    {
+      "id": 30,
+      "entrepreneurId": 7,
+      "title": "Edição de Reels e Shorts",
+      "description": "Edição dinâmica e profissional para vídeos curtos de redes sociais.",
+      "price": 300,
+      "duration": "2 dias",
+      "category": "Edição de Vídeo",
+      "image": "https://images.unsplash.com/photo-1590608897129-79da98d159c7?w=400&h=300&fit=crop",
+      "features": [
+        "Legendas automáticas",
+        "Cortes rápidos",
+        "Música licenciada"
+      ],
+      "rating": 4.8,
+      "reviewCount": 42
     }
   ],
   "categories": [
-    "Web Design",
-    "Digital Marketing",
-    "Content Writing",
-    "Photography"
+    "Hidráulica",
+    "Costura",
+    "Tecnologia",
+    "Jardinagem",
+    "Elétrica",
+    "Beleza",
+    "Design",
+    "Edição de Vídeo",
+    "Social Media"
   ],
   "bookings": [
     {
       "id": 1,
       "serviceId": 1,
       "userId": 1,
-      "date": "2024-01-15",
-      "time": "10:00",
-      "status": "confirmed",
-      "createdAt": "2024-01-10T10:00:00Z"
+      "date": "2025-02-10",
+      "time": "09:00",
+      "status": "confirmado",
+      "createdAt": "2025-02-05T10:00:00Z"
     },
     {
       "id": 2,
       "serviceId": 3,
-      "userId": 1,
-      "date": "2024-01-20",
+      "userId": 2,
+      "date": "2025-03-02",
       "time": "14:00",
-      "status": "pending",
-      "createdAt": "2024-01-12T15:30:00Z"
-    },
-    {
-      "id": 3,
-      "serviceId": 5,
-      "userId": 1,
-      "date": "2024-01-05",
-      "time": "09:00",
-      "status": "completed",
-      "createdAt": "2024-01-01T09:00:00Z"
+      "status": "pendente",
+      "createdAt": "2025-02-28T13:30:00Z"
     }
   ]
 }

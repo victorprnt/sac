@@ -11,6 +11,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 interface Service {
   id: number;
@@ -147,10 +148,10 @@ const ProfilePage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         {/* User Info Card */}
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <div className="flex items-center">
@@ -348,6 +349,8 @@ const ProfilePage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

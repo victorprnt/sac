@@ -11,6 +11,7 @@ import ServiceListing from "./pages/ServiceListing";
 import ServiceDetails from "./pages/ServiceDetails";
 import ProfilePage from "./pages/ProfilePage";
 import ServicesPage from "./pages/ServicesPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -47,6 +48,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <ProtectedRoute>
+                <AboutPage />
               </ProtectedRoute>
             }
           />
